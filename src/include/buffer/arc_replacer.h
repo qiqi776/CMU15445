@@ -85,6 +85,8 @@ class ArcReplacer {
   std::mutex latch_;
 
   // TODO(student): You can add member variables / functions as you like.
+  std::unordered_map<frame_id_t, std::list<frame_id_t>::iterator> alive_pos_;
+  std::unordered_map<page_id_t, std::list<page_id_t>::iterator> ghost_pos_;
 };
 
 }  // namespace bustub
